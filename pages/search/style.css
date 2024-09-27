@@ -5,7 +5,9 @@
 
 }
 
-
+.all_albums {
+  height: 300px;
+}
 
 .right_side {
   height: fit-content;
@@ -30,7 +32,7 @@ body {
   display: flex;
   width: 100%;
   gap: 20px;
-  height: 100vh;
+  height: 100%;
 }
 
 .search-container {
@@ -243,74 +245,61 @@ body {
 }
 
 .all_music {
-  width: 90%;
+  width: 93%;
+  height: fit-content;
   margin-left: 10px;
-  margin-top: 10px;
+  margin-top: 40px;
 }
 
+.track-list {
+  padding: 20px;
+}
+
+.track-list h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
 
 .track-item {
+  cursor: pointer;
   display: flex;
   align-items: center;
-  padding: 10px;
-  background-color: #222;
-  color: #fff;
+  padding: 15px 0;
   border-bottom: 1px solid #333;
-  font-family: Arial, sans-serif;
 }
 
-.track-number {
-  width: 30px;
-  text-align: center;
-  margin-right: 10px;
-}
-
-.track-image {
+.track-photo {
   width: 40px;
   height: 40px;
-  border-radius: 4px;
-  object-fit: cover;
-  margin-right: 10px;
+  object-fit: contain;
+  margin-right: 15px;
 }
 
 .track-details {
-  flex: 1;
+  flex-grow: 1;
   display: flex;
-  flex-direction: column;
+  margin-left: 20px;
+  align-items: center;
 }
 
-.track-title {
+.track-name {
+  font-size: 18px;
+  color: white;
+  margin-right: auto;
+}
+
+.track-plays {
   font-size: 14px;
-  font-weight: bold;
-}
-
-.track-artist {
-  font-size: 12px;
-  color: #aaa;
-}
-
-.track-album {
-  flex: 1;
-  text-align: center;
-  font-size: 12px;
-  color: #aaa;
-}
-
-.track-time-ago {
-  flex: 1;
-  text-align: center;
-  font-size: 12px;
-  color: #aaa;
+  color: rgb(255, 255, 255);
+  margin-right: 50px;
 }
 
 .track-duration {
-  width: 40px;
-  text-align: right;
-  font-size: 12px;
-  color: #aaa;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  margin-left: 30px;
+
 }
-
-
 
 
 
@@ -488,4 +477,107 @@ footer {
 .footer-player-right-buttons img {
   margin-right: 20px;
   width: 16px;
+}
+
+
+.name_searches {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.music_albums {
+  display: flex;
+  gap: 50px;
+
+}
+
+.item {
+  width: 300px;
+  height: 200px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.name {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.actor_name {
+  font-size: 15px;
+  color: #3b3939;
+}
+
+.more {
+  margin-top: 15px;
+  background-color: #181818;
+  color: white;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+.atists {
+  display: flex;
+  margin-left: 20px;
+  gap: 40px;
+  height: 250px;
+}
+
+
+.artist {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  color: white;
+  font-family: Arial, sans-serif;
+
+}
+
+.artist_photo {
+
+  border-radius: 50%;
+  width: 190px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.name_artist {
+  margin-top: 10px;
+
+
+}
+
+
+
+.mix {
+  width: 90%;
+
+  margin-top: 180px;
+  height: 250px;
+}
+
+
+.head_mix {
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mixes {
+  all: unset;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+
+
+.mixes:hover::after {
+  width: 100%;
 }

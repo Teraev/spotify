@@ -1,9 +1,7 @@
-import axios from "axios"
 import ApiHandler from "./lib/http.request.js"
 import { CreateLeftSide, createFotter, createHeader, createPlayer, reload } from "./lib/ui.js"
 import { CreateAlbum } from "./lib/components/alboms.js"
 import { CreateActots } from "./lib/components/artist.js"
-
 
 const PUBLIC_URL = new ApiHandler(import.meta.env.VITE_PUBLIC_URL)
 const hash = location.hash
@@ -19,7 +17,6 @@ const bottom = document.querySelector('footer')
 
 CreateLeftSide(left_side)
 createHeader(header)
-
 createPlayer(player)
 createFotter(bottom)
 
@@ -46,10 +43,7 @@ PUBLIC_URL.getData(`/browse/new-releases`)
 
 PUBLIC_URL.getData('/me')
     .then(me => {
-
-
         specialy_for.innerHTML = 'Made For ' + me.display_name
-
     })
 
 
@@ -64,17 +58,13 @@ PUBLIC_URL.getData(`/browse/new-releases`)
             }
         })
 
-
         reload(sortedAlbums.splice(1, 4), CreateAlbum, specialy_music)
     })
 
 
-
-
 PUBLIC_URL.getData(`/artists?ids=2CIMQHirSU0MQqyYHq0eOx,3TVXtAsR1Inumwj472S9r4,1vCWHaC5f2uS3yhpwWbIA6,1Xyo4u8uXC1ZmMpatF05PJ,3Nrfpe0tUJi4K4DXYWgMUX,6eUKZXaKkcviH0Ku9w2n3V`)
     .then(res => {
-        console.log(res);
-        reload(res.artists.splice(0, 6), CreateActots, atists)
+        reload(res.artists.slice(0, 4), CreateActots, atists);
     })
 
 
